@@ -1,0 +1,13 @@
+#container{
+	max-width: 60%;
+	margin:0 auto;
+}
+
+.box>span{
+	background-color: #e74c3c;
+	color:#ecf0f1;
+	display: block;
+	text-align: center;
+	padding-top: 1em;
+	height: 2em;
+}
