@@ -3,16 +3,30 @@
 <head>
 	<title>The Evil Blog</title>
 
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<link rel="stylesheet" type="text/css"  href="style.css"></link>
-
-	<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
-
-	<script src="app.js"></script>
-	<script src="post.js"></script>
-	<script src="postUI.js"></script>
+	
+    <script src="scripts/app.js"></script>
+    <script src="scripts/post.js"></script>
+    <script src="scripts/postUI.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyC_QTx6ZaFn1QEWQZdzDv3NqCm5MPJzJu8",
+            authDomain: "theevilmouseblog.firebaseapp.com",
+            databaseURL: "https://theevilmouseblog.firebaseio.com",
+            projectId: "theevilmouseblog",
+            storageBucket: "theevilmouseblog.appspot.com",
+            messagingSenderId: "341107600456"
+        };
+        firebase.initializeApp(config);
+    </script>
 
 </head>
-<body>
+<!-- <body>
 	<div id="container">
 		<div class="box blog">
 			<span>The Evil Blog</span>
@@ -21,15 +35,26 @@
 				<span class="tittle"></span>
 			</div>
 		</div>
-<!-- 		<div class="box post">
-			<span>Add an Evil Post</span>
-
-		</div>
-		<div class="box edit">
-			<span>Edit an Evil Post</span>
-			
-		</div> -->
 	</div>
 
+</body> -->
+<body class="container row">
+    <div class="formPost">
+        <div class="tittle">
+            <h4 class="styleTitle">The evil blog</h4>
+        </div>
+        <div class="postContainer" id="postContainer"></div>
+        <h4 class="styleTitle">Posting</h4>
+        <div class="bottom-Container">
+            <input type="text" id="title" placeholder="Titulo del post">
+            <textarea id="txtPost" cols="3" rows="3" placeholder="Escribe el post"></textarea>
+            <button id="btnPost" class="btnPost btn-primary">Post</button>
+        </div>
+        <div>
+            <button id="btnUpdate" class="btnUpdate btn-primary">Update</button>
+            <button id="btnDelete" class="btnDelete btn-warning">Delete</button> 
+            <button id="btnCancel" class="btnCancel btn-danger">Cancel</button>
+        </div>
+    </div>
 </body>
 </html>
